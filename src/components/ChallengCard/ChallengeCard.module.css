@@ -1,0 +1,47 @@
+.challengeTitle {
+  font-family: var(--font-comfortaa);
+  font-weight: bold;
+  font-size: 6rem;
+  /* padding-bottom: 24px; */
+}
+
+.challengeCardBlue {
+  color: #1fcff1;
+}
+
+.challengeCardGreen {
+  color: #19fb9b;
+}
+
+.challengeCard3 {
+  color: #ff00ff;
+}
+
+.challengeCard4 {
+  color: #ff0000;
+}
+
+.challengeCard5 {
+  color: #ffd700;
+}
+
+.challengeCard6 {
+  color: #1e90ff;
+}
+
+.challengeDescription {
+  font-family: var(--font-lato);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+  color: var(--black);
+}
+
+.challengeDate {
+  font-family: var(--font-lato);
+  font-weight: normal;
+  font-size: 1.2rem;
+
+  color: var(--gray-200);
+}
