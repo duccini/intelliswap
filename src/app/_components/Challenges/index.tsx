@@ -14,7 +14,7 @@ export default function Challenges() {
           />
 
           <ChallengeCard
-            title="106M"
+            title="106B"
             description="Negociado na Uniswap"
             date="Dezembro de 2024"
             color="challengeCard3"
@@ -28,7 +28,7 @@ export default function Challenges() {
           />
 
           <ChallengeCard
-            title="96M"
+            title="96B"
             description="Negociado na PancakeSwap"
             date="Dezembro de 2024"
             color="challengeCard4"
@@ -42,14 +42,36 @@ export default function Challenges() {
           />
 
           <ChallengeCard
-            title="58M"
+            title="58B"
             description="Negociado na Raydium"
             date="Dezembro de 2024"
             color="challengeCard6"
           />
         </div>
 
-        <div className={styles.challengesHeader}></div>
+        <div className={styles.challengesHeader}>
+          <h2>Participe deste mercado bilionário</h2>
+          <p>
+            Com <strong>IntelliSwap</strong> você investe em poucos cliques
+          </p>
+          <ul>
+            <li>
+              <p>Escolhe o risco com base no seu perfil</p>
+            </li>
+            <li>
+              <p>
+                Seleciona um pool entre as opções mais vantajos para o seu
+                perfil
+              </p>
+            </li>
+            <li>
+              <p>Define o valor total a ser investido</p>
+            </li>
+            <li>
+              <p>Confirma o investimento</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

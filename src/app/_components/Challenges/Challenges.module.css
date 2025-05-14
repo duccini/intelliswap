@@ -17,15 +17,52 @@
 }
 
 .challengesDetails {
-  width: 60%;
+  width: 61%;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
-  gap: 32px;
+  gap: 12px;
 }
 
 .challengesHeader {
-  border: 1px solid green;
-  width: 40%;
+  width: 39%;
+}
+
+.challengesHeader h2 {
+  font-family: var(--font-comfortaa);
+  font-weight: bold;
+  font-size: 2.8rem;
+  color: var(--black);
+
+  line-height: 1.5;
+  padding-bottom: 24px;
+}
+
+.challengesHeader ul {
+  list-style-position: inside;
+  /* padding: 0; */
+}
+
+.challengesHeader li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.challengesHeader li p {
+  display: inline;
+}
+
+.challengesHeader p {
+  font-family: var(--font-lato);
+
+  font-size: 1.5rem;
+  color: var(--black);
+
+  /* line-height: 1.2;
+   */
+}
+
+.challengesHeader > p:first-of-type {
+  padding-bottom: 20px;
 }
