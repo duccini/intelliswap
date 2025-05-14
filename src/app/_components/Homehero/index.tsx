@@ -13,8 +13,8 @@ export default function HomeHero() {
         </div>
 
         <div className={styles.buttons}>
-          <Button />
-          <Button />
+          <Button text="Como funciona" type="secondary" />
+          <Button text="Quero investir" type="primary" />
         </div>
       </div>
     </div>

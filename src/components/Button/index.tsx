@@ -4,7 +4,12 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "./Button.module.css";
 
-export default function Button() {
+interface ButtonProps {
+  text: string;
+  type: string;
+}
+
+export default function Button({ text, type = "primary" }: ButtonProps) {
   const linkRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
@@ -30,7 +35,9 @@ export default function Button() {
       <div className={styles.button}>
         <i></i>
         <i></i>
-        <button type="button">Teste do botão</button>
+        <button className={`${styles[type]}`} type="button">
+          {text}
+        </button>
       </div>
     </Link>
   );

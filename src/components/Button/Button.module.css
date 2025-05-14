@@ -1,6 +1,6 @@
 .buttonContainer {
   position: relative;
-  width: 200px;
+  width: 220px;
   height: 60px;
   display: inline-block;
   border-radius: 12px;
@@ -16,12 +16,26 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  /* letter-spacing: 2px; */
   font-family: var(--font-lato), sans-serif;
-  border: 1px solid var(--primary);
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  border-size: 1px;
+  border-style: solid;
   border-radius: 12px;
-  background: rgba(14, 21, 56, 0.65);
+
   color: var(--white);
+
+  cursor: pointer;
+}
+
+.primary {
+  background: #6ed5a9;
+  border-color: #6ed5a9;
+}
+
+.secondary {
+  background: #9c9fd1;
+  border-color: #9c9fd1;
 }
 
 .button i {
@@ -42,7 +56,7 @@
     var(--yellow),
     #5f66d1,
     #5f66d1,
-    var(--green)
+    #52f1ad
   );
 }
 
