@@ -1,8 +1,19 @@
 .challengeTitle {
   font-family: var(--font-comfortaa);
   font-weight: bold;
-  font-size: 6rem;
-  /* padding-bottom: 24px; */
+  font-size: 5.5rem;
+  height: 5.5rem;
+
+  display: inline-block;
+  position: relative;
+}
+
+.challengeTitle span {
+  font-size: 1.52rem;
+
+  bottom: 8px;
+  right: -60px;
+  position: absolute;
 }
 
 .challengeCardBlue {

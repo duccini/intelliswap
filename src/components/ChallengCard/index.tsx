@@ -15,7 +15,9 @@ export default function ChallengeCard({
 }: ChallengeCard) {
   return (
     <div className={styles.challengeCard}>
-      <h3 className={`${styles.challengeTitle} ${styles[color]}`}>{title}</h3>
+      <h3 className={`${styles.challengeTitle} ${styles[color]}`}>
+        {title} <span>USD</span>
+      </h3>
       <h4 className={styles.challengeDescription}>{description}</h4>
       <h5 className={styles.challengeDate}>{date}</h5>
     </div>

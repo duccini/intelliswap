@@ -4,8 +4,9 @@
   width: 100%;
   height: 100vh;
 
-  /* background: linear-gradient(to right, #5f66d1, #8794f8); */
   background: radial-gradient(circle, #5f66d1, #8794f8);
+  /* background: linear-gradient(to right, #5f66d1, #8794f8); */
+
   /* background: radial-gradient(circle, #8794f8, #5f66d1); */
 
   /* background: linear-gradient(to bottom, #5f66d1, #7b82e5); */
@@ -16,7 +17,7 @@
 
 .header {
   margin: 0 auto;
-  margin-top: 300px;
+  margin-top: 9%;
 }
 
 .content h1 {
