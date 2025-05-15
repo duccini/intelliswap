@@ -1,0 +1,23 @@
+.headerNav {
+  margin-bottom: 24px;
+}
+
+.headerNav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 12px;
+}
+
+.headerNav ul li {
+  font-family: var(--font-lato);
+  font-size: 1.25rem;
+  color: var(--black);
+
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: var(--white);
+
+  cursor: pointer;
+}

@@ -1,0 +1,45 @@
+.itemContent {
+  display: flex;
+}
+
+.itemImage,
+.itemDetails {
+  width: 50%;
+  height: 400px;
+}
+
+.itemImage {
+  /* border: 1px solid black; */
+
+  border-radius: 16px 0 0 16px;
+
+  position: relative;
+  object-fit: cover;
+
+  overflow: hidden;
+}
+
+.itemDetails {
+  background: var(--background);
+
+  border-radius: 0 16px 16px 0;
+
+  padding: 32px;
+}
+
+.itemDetails h3 {
+  font-family: var(--font-lato), sans-serif;
+  font-size: 1.5rem;
+
+  color: var(--black);
+
+  padding-bottom: 24px;
+}
+
+.itemDetails p {
+  font-family: var(--font-lato), sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+
+  color: var(--black);
+}
