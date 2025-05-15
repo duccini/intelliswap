@@ -11,9 +11,11 @@ export default function Header() {
           <Image
             src="/intelliswap_logo.png"
             alt="IntelliSwap Logo"
-            fill
-            quality={100}
+            width={120}
+            height={70}
+            priority
             className={styles.logo}
+            quality={100}
           />
         </div>
         <div className={styles.contato}>
