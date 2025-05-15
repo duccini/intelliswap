@@ -56,19 +56,19 @@ export default function Challenges() {
           </p>
           <ul>
             <li>
-              <p>Escolhe o risco com base no seu perfil</p>
+              <p>Escolha o risco com base no seu perfil</p>
             </li>
             <li>
               <p>
-                Seleciona um pool entre as opções mais vantajos para o seu
-                perfil
+                Selecione um pool de liquidez entre as opções mais vantajosas
+                para o seu perfil
               </p>
             </li>
             <li>
-              <p>Define o valor total a ser investido</p>
+              <p>Defina o valor total a ser investido</p>
             </li>
             <li>
-              <p>Confirma o investimento</p>
+              <p>Confirme o investimento</p>
             </li>
           </ul>
         </div>
