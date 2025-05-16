@@ -36,7 +36,7 @@ export default function PoolsTable({ pools }: Props) {
         <thead>
           <tr>
             <th>Pool</th>
-            <th>Fee</th>
+            <th>Fee Tier</th>
             <th>TVL</th>
             <th>24h Vol</th>
             <th>24h Fee / TVL</th>
@@ -49,7 +49,7 @@ export default function PoolsTable({ pools }: Props) {
               <td>
                 {pool.token0.symbol}-{pool.token1.symbol}
               </td>
-              <td>${pool.feesUSD.toFixed(2)}</td>
+              <td>{pool.feeTier / 10000}%</td>
               <td>${pool.totalValueLockedUSD.toFixed(2)}</td>
               <td>${pool.volumeUSD.toFixed(2)}</td>
               <td>{(pool.feesUSD / pool.totalValueLockedUSD).toFixed(6)}</td>

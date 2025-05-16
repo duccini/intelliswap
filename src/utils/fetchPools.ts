@@ -11,6 +11,7 @@ const query = `{
     totalValueLockedUSD
     volumeUSD
     feesUSD
+    feeTier
   }
 }`;
 
@@ -32,6 +33,7 @@ export async function fetchPools(): Promise<Pool[]> {
     totalValueLockedUSD: parseFloat(pool.totalValueLockedUSD),
     volumeUSD: parseFloat(pool.volumeUSD),
     feesUSD: parseFloat(pool.feesUSD),
+    feeTier: parseFloat(pool.feeTier),
   }));
 }
 

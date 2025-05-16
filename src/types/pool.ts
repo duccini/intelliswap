@@ -9,6 +9,7 @@ export interface RawPool {
   totalValueLockedUSD: string; // vem como string do The Graph
   volumeUSD: string;
   feesUSD: string;
+  feeTier: string;
 }
 
 export interface PoolsResponse {
@@ -24,4 +25,5 @@ export interface Pool {
   totalValueLockedUSD: number;
   volumeUSD: number;
   feesUSD: number;
+  feeTier: number;
 }
