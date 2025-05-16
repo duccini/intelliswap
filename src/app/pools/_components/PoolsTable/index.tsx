@@ -23,8 +23,6 @@ export default function PoolsTable({ pools }: Props) {
 
   return (
     <div className={styles.container}>
-      <h1>Invista em um pool de liquidez</h1>
-
       <div className={styles.filters}>
         <button onClick={() => setFilter("all")}>Explorar Pools</button>
         <button onClick={() => setFilter("low")}>Risco Baixo</button>

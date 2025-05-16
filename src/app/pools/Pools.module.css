@@ -1,0 +1,28 @@
+.poolsContainer {
+  min-height: 100vh;
+  background: radial-gradient(circle, #5f66d1, #8794f8);
+}
+
+.poolsContent {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.poolsHeader {
+  padding-top: 96px;
+}
+
+.poolsHeader h1 {
+  text-align: center;
+  font-family: var(--font-comfortaa), sans-serif;
+  font-size: 3rem;
+  color: var(--black);
+}
+
+.poolsHeader p {
+  padding-top: 16px;
+  text-align: center;
+  font-family: var(--font-lato), sans-serif;
+  font-size: 1.5rem;
+  color: var(--background);
+}
