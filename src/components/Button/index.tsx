@@ -7,9 +7,10 @@ import styles from "./Button.module.css";
 interface ButtonProps {
   text: string;
   type: string;
+  path: string;
 }
 
-export default function Button({ text, type = "primary" }: ButtonProps) {
+export default function Button({ text, type, path }: ButtonProps) {
   const linkRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export default function Button({ text, type = "primary" }: ButtonProps) {
   }, []);
 
   return (
-    <Link href="/#" className={styles.buttonContainer} ref={linkRef}>
+    <Link href={path} className={styles.buttonContainer} ref={linkRef}>
       <div className={styles.button}>
         <i></i>
         <i></i>

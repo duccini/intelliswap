@@ -4,7 +4,7 @@ import HowItWorksContainer from "@/components/HowItWorksContainer";
 
 export default function HowItWorks() {
   return (
-    <div className={styles.howItWorksContainer}>
+    <div className={styles.howItWorksContainer} id="howItWorks">
       <div className={styles.howItWorksContent}>
         <div className={styles.headerTitle}>
           <h2>

@@ -8,15 +8,17 @@ export default function Header() {
     <div className={styles.headerContainer}>
       <header className={styles.headerContent}>
         <div className={styles.headerImg}>
-          <Image
-            src="/intelliswap_logo.png"
-            alt="IntelliSwap Logo"
-            width={120}
-            height={70}
-            priority
-            className={styles.logo}
-            quality={100}
-          />
+          <Link href="/">
+            <Image
+              src="/intelliswap_logo.png"
+              alt="IntelliSwap Logo"
+              width={120}
+              height={70}
+              priority
+              className={styles.logo}
+              quality={100}
+            />
+          </Link>
         </div>
         <div className={styles.contato}>
           <Link href="/contato">Contato</Link>
