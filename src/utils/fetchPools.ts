@@ -1,4 +1,4 @@
-import { Pool } from "@/types/pool";
+import { Pool, RawPool } from "@/types/pool";
 
 const API_KEY = process.env.THE_GRAPH_API_KEY;
 const STABLECOINS = ["USDC", "USDT", "DAI", "TUSD", "USDP", "GUSD"];
@@ -25,7 +25,7 @@ export async function fetchPools(): Promise<Pool[]> {
   );
 
   const json = await res.json();
-  return json.data.pools.map((pool: any) => ({
+  return json.data.pools.map((pool: RawPool) => ({
     id: pool.id,
     token0: pool.token0,
     token1: pool.token1,
