@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { ArrowRight } from "lucide-react";
+
 import { Pool } from "@/types/pool";
 import { filterPools } from "@/utils/fetchPools";
 import Link from "next/link";
@@ -15,6 +17,33 @@ export default function PoolsTable({ pools }: Props) {
   const [filter, setFilter] = useState<"all" | "low" | "medium" | "high">(
     "all"
   );
+
+  let info = "";
+  switch (filter) {
+    case "all":
+      info =
+        "Pools de liquidez com maiores scores. Pode não ser indicado para o seu perfil de risco.";
+      break;
+
+    case "low":
+      info =
+        "Pools de liquidez formado por dois stablecoins. Risco menor assim como potencial de retorno.";
+      break;
+
+    case "medium":
+      info =
+        "Pools de liquidez formado por um stablecoin e um altcoin. Risco médio assim como potencial de retorno.";
+      break;
+
+    case "high":
+      info =
+        "Pools de liquidez formado por dois altcoins. Risco maior assim como potencial de retorno.";
+      break;
+
+    default:
+      info = "Perfil de risco não encontrado";
+      break;
+  }
 
   const getFiltered = () => {
     if (filter === "all") return pools.slice(0, 10);
@@ -58,6 +87,10 @@ export default function PoolsTable({ pools }: Props) {
         </button>
       </div>
 
+      <div className={styles.info}>
+        <h2>{info}</h2>
+      </div>
+
       <table className={styles.table}>
         <thead>
           <tr>
@@ -81,18 +114,7 @@ export default function PoolsTable({ pools }: Props) {
               <td>{(pool.feesUSD / pool.totalValueLockedUSD).toFixed(6)}</td>
               <td>
                 <Link href={`/pool/${pool.id}`}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
+                  <ArrowRight size={18} />
                 </Link>
               </td>
             </tr>

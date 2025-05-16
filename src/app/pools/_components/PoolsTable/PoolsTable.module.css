@@ -6,7 +6,7 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 48px;
 }
 
 .filters button {
@@ -43,18 +43,96 @@
   border-color: #32e699;
 }
 
+.info {
+  margin-bottom: 12px;
+}
+
+.info h2 {
+  color: rgb(10, 17, 59);
+  font-family: var(--font-lato), sans-serif;
+  font-weight: 400;
+}
+
 .table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate; /* necessário para o border-radius funcionar */
+  border-spacing: 0; /* remove espaçamento extra */
+  table-layout: fixed;
+  border: 1px solid #4e54a3; /* borda externa completa */
+  border-radius: 12px;
+  overflow: hidden;
 }
 
+/* Definindo largura fixa por coluna */
+.table th:nth-child(1),
+.table td:nth-child(1) {
+  width: 20%;
+}
+.table th:nth-child(2),
+.table td:nth-child(2) {
+  width: 15%;
+}
+.table th:nth-child(3),
+.table td:nth-child(3) {
+  width: 15%;
+}
+.table th:nth-child(4),
+.table td:nth-child(4) {
+  width: 15%;
+}
+.table th:nth-child(5),
+.table td:nth-child(5) {
+  width: 20%;
+}
+.table th:nth-child(6),
+.table td:nth-child(6) {
+  width: 15%;
+}
+
+/* Células com apenas divisões horizontais internas */
 .table th,
 .table td {
-  border: 1px solid #ccc;
-  padding: 0.5rem;
+  border-bottom: 1px solid #4e54a3; /* apenas linhas horizontais */
+  padding: 8px;
   text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.table td:last-child {
+/* Mostrar linha superior do thead */
+.table thead th {
+  border-bottom: 1px solid #4e54a3;
+  background-color: #4e54a3;
+
+  color: var(--white);
+  font-family: var(--font-comfortaa), sans-serif;
+  font-size: 1.2rem;
+  padding: 16px 8px;
+}
+
+.table td {
+  color: var(--black);
+  font-family: var(--font-lato), sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Centralizar a última coluna */
+.table td:last-child,
+.table th:last-child {
   text-align: center;
+}
+
+/* Aplicar border-radius nas extremidades */
+.table thead th:first-child {
+  border-top-left-radius: 12px;
+}
+.table thead th:last-child {
+  border-top-right-radius: 12px;
+}
+.table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+.table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
 }
