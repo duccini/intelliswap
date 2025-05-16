@@ -24,10 +24,38 @@ export default function PoolsTable({ pools }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.filters}>
-        <button onClick={() => setFilter("all")}>Explorar Pools</button>
-        <button onClick={() => setFilter("low")}>Risco Baixo</button>
-        <button onClick={() => setFilter("medium")}>Risco Médio</button>
-        <button onClick={() => setFilter("high")}>Risco Alto</button>
+        <button
+          className={
+            filter === "all" ? styles.buttonActive : styles.normalButton
+          }
+          onClick={() => setFilter("all")}
+        >
+          Explorar Pools
+        </button>
+        <button
+          className={
+            filter === "low" ? styles.buttonActive : styles.normalButton
+          }
+          onClick={() => setFilter("low")}
+        >
+          Risco Baixo
+        </button>
+        <button
+          className={
+            filter === "medium" ? styles.buttonActive : styles.normalButton
+          }
+          onClick={() => setFilter("medium")}
+        >
+          Risco Médio
+        </button>
+        <button
+          className={
+            filter === "high" ? styles.buttonActive : styles.normalButton
+          }
+          onClick={() => setFilter("high")}
+        >
+          Risco Alto
+        </button>
       </div>
 
       <table className={styles.table}>

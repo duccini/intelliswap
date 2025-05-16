@@ -12,6 +12,35 @@
 .filters button {
   padding: 0.5rem 1rem;
   cursor: pointer;
+
+  font-family: var(--font-lato), sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  border-size: 1px;
+  border-style: solid;
+  border-radius: 12px;
+
+  color: var(--white);
+}
+
+.normalButton {
+  background: #434791;
+  border-color: #434791;
+}
+
+.normalButton:hover {
+  background: #686cb9;
+  border-color: #686cb9;
+}
+
+.buttonActive {
+  background: #1cc97f;
+  border-color: #1cc97f;
+}
+
+.buttonActive:hover {
+  background: #32e699;
+  border-color: #32e699;
 }
 
 .table {
