@@ -1,5 +1,4 @@
 import styles from "./Footer.module.css";
-import { Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
