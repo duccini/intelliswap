@@ -45,6 +45,9 @@
 
 .info {
   margin-bottom: 12px;
+
+  position: relative;
+  z-index: 100;
 }
 
 .info h2 {
@@ -60,7 +63,9 @@
   table-layout: fixed;
   border: 1px solid #4e54a3; /* borda externa completa */
   border-radius: 12px;
-  overflow: hidden;
+
+  overflow: visible;
+  position: relative;
 }
 
 /* Definindo largura fixa por coluna */
@@ -109,6 +114,11 @@
   font-family: var(--font-comfortaa), sans-serif;
   font-size: 1.2rem;
   padding: 16px 8px;
+}
+
+.table td {
+  position: relative;
+  overflow: visible;
 }
 
 .table td {

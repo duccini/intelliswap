@@ -4,12 +4,14 @@ export interface Token {
 
 export interface RawPool {
   id: string;
-  token0: Token;
-  token1: Token;
-  totalValueLockedUSD: string; // vem como string do The Graph
-  volumeUSD: string;
-  feesUSD: string;
+  token0: { symbol: string; id: string };
+  token1: { symbol: string; id: string };
+  totalValueLockedUSD: string;
   feeTier: string;
+  poolDayData: {
+    volumeUSD: string;
+    feesUSD: string;
+  }[];
 }
 
 export interface PoolsResponse {

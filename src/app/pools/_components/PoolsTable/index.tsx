@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, HelpCircle } from "lucide-react";
 
 import { Pool } from "@/types/pool";
 import { filterPools } from "@/utils/fetchPools";
 import Link from "next/link";
 
 import styles from "./PoolsTable.module.css";
+import { formatNumber } from "@/utils/formatNumber";
 
 interface Props {
   pools: Pool[];
@@ -95,10 +96,30 @@ export default function PoolsTable({ pools }: Props) {
         <thead>
           <tr>
             <th>Pool</th>
-            <th>Fee Tier</th>
-            <th>TVL</th>
-            <th>24h Vol</th>
-            <th>24h Fee / TVL</th>
+            <th>
+              Fee Tier{" "}
+              <span title="Taxa da pool">
+                <HelpCircle size={16} className={styles.icon} />
+              </span>
+            </th>
+            <th>
+              TVL{" "}
+              <span title="Valor Total da pool">
+                <HelpCircle size={16} className={styles.icon} />
+              </span>
+            </th>
+            <th>
+              24h Vol{" "}
+              <span title="Valor negociado na pool em 24h">
+                <HelpCircle size={16} className={styles.icon} />
+              </span>
+            </th>
+            <th>
+              24h Fee{" "}
+              <span title="Taxa paga aos provedores de liquidez do pool">
+                <HelpCircle size={16} className={styles.icon} />
+              </span>
+            </th>
             <th></th>
           </tr>
         </thead>
@@ -109,9 +130,9 @@ export default function PoolsTable({ pools }: Props) {
                 {pool.token0.symbol}-{pool.token1.symbol}
               </td>
               <td>{pool.feeTier / 10000}%</td>
-              <td>${pool.totalValueLockedUSD.toFixed(2)}</td>
-              <td>${pool.volumeUSD.toFixed(2)}</td>
-              <td>{(pool.feesUSD / pool.totalValueLockedUSD).toFixed(6)}</td>
+              <td>{formatNumber(pool.totalValueLockedUSD)}</td>
+              <td>{formatNumber(pool.volumeUSD)}</td>
+              <td>{formatNumber(pool.feesUSD)}</td>
               <td>
                 <Link href={`/pool/${pool.id}`}>
                   <ArrowRight size={18} />

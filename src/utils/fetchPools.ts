@@ -9,9 +9,11 @@ const query = `{
     token0 { symbol id }
     token1 { symbol id }
     totalValueLockedUSD
-    volumeUSD
-    feesUSD
     feeTier
+    poolDayData(first: 1, orderBy: date, orderDirection: desc) {
+      volumeUSD
+      feesUSD
+    }
   }
 }`;
 
@@ -26,13 +28,14 @@ export async function fetchPools(): Promise<Pool[]> {
   );
 
   const json = await res.json();
+
   return json.data.pools.map((pool: RawPool) => ({
     id: pool.id,
     token0: pool.token0,
     token1: pool.token1,
     totalValueLockedUSD: parseFloat(pool.totalValueLockedUSD),
-    volumeUSD: parseFloat(pool.volumeUSD),
-    feesUSD: parseFloat(pool.feesUSD),
+    volumeUSD: parseFloat(pool.poolDayData?.[0]?.volumeUSD ?? "0"),
+    feesUSD: parseFloat(pool.poolDayData?.[0]?.feesUSD ?? "0"),
     feeTier: parseFloat(pool.feeTier),
   }));
 }

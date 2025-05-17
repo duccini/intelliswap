@@ -25,4 +25,12 @@
   font-family: var(--font-lato), sans-serif;
   font-size: 1.5rem;
   color: var(--background);
+
+  position: relative;
+  z-index: 100;
+}
+
+.pools {
+  position: relative;
+  z-index: 100;
 }
