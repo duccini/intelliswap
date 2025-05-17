@@ -21,3 +21,7 @@
 
   cursor: pointer;
 }
+
+.navbar li:hover {
+  background: rgb(151, 154, 195);
+}
