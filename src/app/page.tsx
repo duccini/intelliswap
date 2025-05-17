@@ -11,9 +11,6 @@ export default function Home() {
         <Challenges />
         <HowItWorks />
       </main>
-      <footer className={styles.footer}>
-        <p>footer</p>
-      </footer>
     </div>
   );
 }

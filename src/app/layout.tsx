@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Comfortaa, Lato } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const comfortaaSans = Comfortaa({
   variable: "--font-comfortaa",
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={`${comfortaaSans.variable} ${latoMono.variable}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

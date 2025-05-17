@@ -1,0 +1,30 @@
+.footerContainer {
+  background: var(--background);
+}
+
+.footerContent {
+  width: 1180px;
+  margin: 0 auto;
+
+  padding: 48px 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerCopyright p {
+  font-family: var(--font-lato);
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+.socialMediaIcons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.socialMediaIcons svg {
+  height: 30px;
+  width: auto;
+}
