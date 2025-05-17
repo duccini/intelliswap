@@ -4,12 +4,11 @@
   width: 100%;
   height: 100vh;
 
-  background: radial-gradient(circle, #5f66d1, #8794f8);
-  /* background: linear-gradient(to right, #5f66d1, #8794f8); */
+  /* background: radial-gradient(circle, #5f66d1, #8794f8); */
+  background: linear-gradient(to bottom left, #5f66d1, #7b82e5);
 
   /* background: radial-gradient(circle, #8794f8, #5f66d1); */
 
-  /* background: linear-gradient(to bottom, #5f66d1, #7b82e5); */
   /* background: linear-gradient(to bottom right, #5f66d1, #4a50b3); */
 
   /* background: radial-gradient(circle, #5f66d1, #5057c4); */
