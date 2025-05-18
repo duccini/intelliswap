@@ -1,4 +1,4 @@
-# IntelliSwap - BackEnd
+# IntelliSwap - Back-End
 
 API desenvolvida com FastAPI para prever o APR de uma pool na Uniswap V3 usando um modelo de machine learning (Random Forest).
 
