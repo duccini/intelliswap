@@ -1,6 +1,6 @@
 # IntelliSwap
 
-# IntelliSwap - Frontend
+![Texto alternativo](imagens/exemplo.png)
 
 ## Visão Geral
 
