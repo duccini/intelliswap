@@ -17,7 +17,7 @@
 
 ### Pré-requisitos
 
-- [Node.js](https://nodejs.org/) (versão 18 ou superior)
+- [Node.js](https://nodejs.org/) (versão 18 ou superior e inferior a 22!!)
 - [npm](https://www.npmjs.com/) (gerenciador de pacotes)
 
 ### Passos para Instalação
