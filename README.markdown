@@ -1,6 +1,6 @@
 # IntelliSwap
 
-![Texto alternativo](imagens/exemplo.png)
+![IntelliSwap - Investa em Pools de Liquidez de forma simples](https://github.com/duccini/intelliswap/blob/main/intelliswap.png)
 
 ## Visão Geral
 
