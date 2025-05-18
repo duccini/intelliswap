@@ -5,10 +5,10 @@ import { ArrowRight, HelpCircle } from "lucide-react";
 
 import { Pool } from "@/types/pool";
 import { filterPools } from "@/utils/fetchPools";
-import Link from "next/link";
 
 import styles from "./PoolsTable.module.css";
 import { formatNumber } from "@/utils/formatNumber";
+import { fetchAPR } from "@/utils/api";
 
 interface Props {
   pools: Pool[];
@@ -49,6 +49,16 @@ export default function PoolsTable({ pools }: Props) {
   const getFiltered = () => {
     if (filter === "all") return pools.slice(0, 10);
     return filterPools(pools, filter);
+  };
+
+  const handleGetAPR = async (pool_address: string, feeTier: number) => {
+    try {
+      const apr = await fetchAPR(pool_address, feeTier);
+      const formattedAPR = `${apr.toFixed(2)}%`;
+      alert(`APR previsto: ${formattedAPR}`);
+    } catch (error: any) {
+      alert(`Erro ao buscar APR: ${error.message}`);
+    }
   };
 
   return (
@@ -134,9 +144,10 @@ export default function PoolsTable({ pools }: Props) {
               <td>{formatNumber(pool.volumeUSD)}</td>
               <td>{formatNumber(pool.feesUSD)}</td>
               <td>
-                <Link href={`/pool/${pool.id}`}>
-                  <ArrowRight size={18} />
-                </Link>
+                <ArrowRight
+                  size={18}
+                  onClick={() => handleGetAPR(pool.id, pool.feeTier)}
+                />
               </td>
             </tr>
           ))}

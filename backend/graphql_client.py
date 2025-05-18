@@ -6,8 +6,6 @@ API_KEY = os.getenv("GRAPHQL_API_KEY")
 if not API_KEY:
    raise EnvironmentError("Variável de ambiente GRAPHQL_API_KEY não está definida.")
 
-#API_KEY = "54b3ae486458761ae740097bf7665918"
-
 GRAPHQL_URL = f"https://gateway.thegraph.com/api/{API_KEY}/subgraphs/id/5zvR82QoaXYFyDEKLZ9t6v9adgnptxYpKpSbxtgVENFV"
 
 

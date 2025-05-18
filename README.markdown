@@ -4,10 +4,14 @@
 
 ## Visão Geral
 
-**Nome do Projeto**: IntelliSwap  
-**Problema Resolvido**: Simplifica o investimento em pools de liquidez do protocolo Uniswap V3, reduzindo a barreira de entrada para investidores sem conhecimento avançado em DeFi.  
-**Descrição**: IntelliSwap oferece uma interface amigável que permite aos investidores participar de pools de liquidez com poucos cliques, focando em usabilidade e acessibilidade.  
-**Público-Alvo**: Investidores em criptomoedas interessados em produtos DeFi, mas sem expertise avançada.  
+**IntelliSwap**: Investa em Pools de Liquidez de forma simples!
+
+**Problema Resolvido**: Simplifica o investimento em pools de liquidez do protocolo Uniswap V3, reduzindo a barreira de entrada para investidores sem conhecimento avançado em DeFi.
+
+**Descrição**: IntelliSwap oferece uma interface amigável que permite aos investidores participar de pools de liquidez com poucos cliques, focando em usabilidade e acessibilidade.
+
+**Público-Alvo**: Investidores em criptomoedas interessados em produtos DeFi, mas sem expertise avançada.
+
 **Objetivo do MVP**: Completar o ciclo de investimento na rede de testes Sepolia.
 
 ## Funcionalidades do MVP
