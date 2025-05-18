@@ -52,6 +52,14 @@ POST /predict_apr
 }
 ```
 
+## Exemplo de teste da API no terminal
+
+```bash
+curl -X POST http://localhost:8000/predict_apr \
+ -H "Content-Type: application/json" \
+ -d '{"pool_address":"0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640","feeTier":3000}'
+```
+
 ## 📁 Estrutura do Projeto
 
 ```
