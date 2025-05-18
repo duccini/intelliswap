@@ -56,8 +56,12 @@ export default function PoolsTable({ pools }: Props) {
       const apr = await fetchAPR(pool_address, feeTier);
       const formattedAPR = `${apr.toFixed(2)}%`;
       alert(`APR previsto: ${formattedAPR}`);
-    } catch (error: any) {
-      alert(`Erro ao buscar APR: ${error.message}`);
+    } catch (error) {
+      if (error instanceof Error) {
+        alert(`Erro ao buscar APR: ${error.message}`);
+      } else {
+        alert("Erro desconhecido ao buscar APR");
+      }
     }
   };
 
